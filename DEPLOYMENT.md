@@ -29,7 +29,7 @@ npm run deploy:cloud
 
 Open the resulting Worker `/login` URL and use your configured owner login. Keep secrets out of command arguments, source and ZIPs. `.dev.vars.example` documents names only. The hosted app refuses missing authority.
 
-Wrangler may create the named Worker when registering its first secret, so choose the new target first. This package was bundled locally; fresh remote provisioning is not claimed as tested here.
+Wrangler may create the named Worker when registering its first secret, so choose the new target first. A fresh isolated preview was provisioned on October 14; see [HOSTED-VERIFICATION.md](HOSTED-VERIFICATION.md) for the tested source and results. Your own account and deployment still need the checks below.
 
 ## Git and check companion
 

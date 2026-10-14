@@ -61,4 +61,4 @@ Application/UI source, agent adapters, Git/check runner and companion, tests, pi
 
 [MIT](LICENSE). Third-party dependencies retain their own licenses; see [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
-The video is being revised separately and is not included here. This repository upload does not update the existing Cloudflare deployment or submit the competition entry.
+The approved r3 demo is delivered separately. Its newer interface was recorded locally; the dated October 4 hosted trial is identified separately in the video. The newer release now also has an isolated October 14 Cloudflare preview. See [HOSTED-VERIFICATION.md](HOSTED-VERIFICATION.md) for its exact source, checks and limits. The original deployment is preserved; no competition entry has been submitted.
