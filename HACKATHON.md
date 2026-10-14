@@ -24,7 +24,7 @@ Clone the repository, install Node.js 22.13 or newer, then run `npm ci` and `npm
 
 ## Remaining submission steps
 
-- The repository is deliberately private during preparation. The form asks for an open-source repository URL, and the rules require access to the complete project. Do not treat a private URL alone as submission-ready. Arrange compliant access/publication before submitting; this upload does not change visibility.
+- Open-source repository URL: https://github.com/sleepficus/together. The complete standalone source, root MIT license and run instructions are included.
 - Root LICENSE contains MIT, one of the allowed licenses. Dependencies retain their own notices.
 - Use the approved `Together-Cloudflare-Hackathon-1080p-r3.mp4`: 5:35.68, 1920×1080, 30,321,792 bytes. Upload the extracted MP4, not its transfer ZIP. SHA-256: `044dbb6724bd47c6c659341c5a9659fa4ac39542e0503bc99ef57c221fed02d3`.
 - The video shows the newer interface running locally and a separate, dated October 4 hosted trial. An isolated October 14 preview now runs the newer source plus the login fix. Keep those three records distinct; see [HOSTED-VERIFICATION.md](HOSTED-VERIFICATION.md).

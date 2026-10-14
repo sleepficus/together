@@ -1,6 +1,6 @@
 # Verification — October 14, 2026
 
-This private candidate packages the newer Together interface for installation and review. The repository preparation uses MIT and targets the private sleepficus/together repository at Steve’s request. The r3 video is approved. Public visibility and manual submission remain separate.
+This standalone release packages the newer Together interface for installation and review under MIT at https://github.com/sleepficus/together. Steve approved publication and the r3 video. Manual competition submission remains separate.
 
 - Fresh `npm ci`: passed.
 - Core tests: 465/465 passed. After the encoded task-discussion ID repair and private-link removal, the complete 465-test suite, typecheck and Cloudflare dry bundle passed. Browser-created work and task-discussion messages remained after a refresh.

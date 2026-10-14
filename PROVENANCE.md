@@ -6,7 +6,7 @@ This interface was filmed locally. The existing hosted demonstration still serve
 
 Only application/build/test files were exported. Private records, credentials, operator activation/restore scripts, unrelated house/suit/research material and Git history were excluded. Together's own agent adapters, conversation and work integration remain. Deployment targets and host allowlists were sanitized; corresponding config fixture names were updated. New installation helpers and public documentation were added. Inline contributor credits remain; private journey/notebook links were removed. The backup panel now states that restore automation is excluded. A browser-discovered routing bug was repaired by decoding the conversation path ID once; encoded-ID, invalid-encoding and audience/authentication regressions were added.
 
-Package scripts expose one-command local start/smoke and explicit Cloudflare build/dry-run/deploy. Optional OAuth/MCP configuration requires its own setup, is disabled by default and has no Artifacts binding. The initial packaging did not deploy or publish the app. A separate October 14 preview was subsequently deployed; the repository remains private.
+Package scripts expose one-command local start/smoke and explicit Cloudflare build/dry-run/deploy. Optional OAuth/MCP configuration requires its own setup, is disabled by default and has no Artifacts binding. The initial packaging did not deploy or publish the app. A separate October 14 preview was subsequently deployed. Steve authorized making the standalone repository public on October 14.
 
 The install prerequisite is Node.js 22.13+ because the local server uses unflagged built-in SQLite. Package and lockfile root engines agree; checks ran on Node 22.23.1.
 

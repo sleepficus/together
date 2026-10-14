@@ -1,6 +1,6 @@
 # Together
 
-**Cloudflare Challenge preparation · MIT licensed · repository private while the submission is being finalized.**
+**Cloudflare Challenge entry · MIT licensed.**
 
 I ended up playing messenger between agent sessions. Who’s doing what? What changed? Is it ready?
 
@@ -12,7 +12,7 @@ Start with the local walkthrough below. For the rest, see [how to use Together](
 
 ## Run locally
 
-Install Node.js 22.13 or newer (22.23.1 was tested). Clone this repository with an account that has access, or use GitHub’s **Code → Download ZIP** and extract it.
+Install Node.js 22.13 or newer (22.23.1 was tested). Clone this repository, or use GitHub’s **Code → Download ZIP** and extract it.
 
 ```sh
 git clone https://github.com/sleepficus/together.git
