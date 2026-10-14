@@ -224,13 +224,14 @@ test('/login serves a token-free no-store form; the form post sets the cookie an
   assert.equal(page.status, 200);
   assert.match(page.headers.get('content-type')!, /text\/html/);
   assert.equal(page.headers.get('cache-control'), 'no-store');
+  assert.equal(page.headers.get('referrer-policy'), 'same-origin');
   const html = await page.text();
   assert.match(html, /<form method="post" action="\/login"/);
   assert.equal(html.includes(OWNER.token), false);
 
   const res = await loginFetch(loginReq('/login', {
     method: 'POST',
-    headers: { 'content-type': 'application/x-www-form-urlencoded', 'sec-fetch-site': 'same-origin' },
+    headers: { 'content-type': 'application/x-www-form-urlencoded', 'sec-fetch-site': 'same-origin', origin: BASE },
     body: `token=${encodeURIComponent(OWNER.token)}`,
   }), env);
   assert.equal(res.status, 303);
@@ -258,6 +259,24 @@ test('/login serves a token-free no-store form; the form post sets the cookie an
   }), env);
   assert.equal(xs.status, 403);
   assert.equal(xs.headers.get('set-cookie'), null);
+});
+
+test('/login still rejects opaque or foreign origins even with same-origin fetch metadata', async () => {
+  const { env, storage } = fakeEnv();
+  for (const origin of ['null', 'https://evil.example']) {
+    const response = await loginFetch(loginReq('/login', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'sec-fetch-site': 'same-origin', origin,
+      },
+      body: `token=${encodeURIComponent(OWNER.token)}`,
+    }), env);
+    assert.equal(response.status, 403);
+    assert.equal((await response.json() as { error: { code: string } }).error.code, 'origin_denied');
+    assert.equal(response.headers.get('set-cookie'), null);
+  }
+  assert.equal(storage.map.size, 0);
 });
 
 test('POST /logout revokes the durable record and clears the cookie', async () => {

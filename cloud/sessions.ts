@@ -300,7 +300,8 @@ function loginPage(): Response {
     status: 200,
     headers: {
       'content-type': 'text/html; charset=utf-8',
-      'referrer-policy': 'no-referrer',
+      // Preserve the same-origin form POST's Origin; no-referrer can make it null.
+      'referrer-policy': 'same-origin',
     },
   });
 }
